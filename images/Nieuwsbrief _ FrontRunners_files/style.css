@@ -1,0 +1,368 @@
+/* Is misschien al gemaakt: */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    /* padding: 0 2em; */
+}
+
+/* Slick Carousel*/
+.carousel-item {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparante zwarte overlay */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.carousel-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 500px;
+    gap: 2em;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: gold;
+}
+
+.carousel-item h1 {
+    font-size: 5rem;
+}
+
+.carousel-item p {
+    font-size: 2rem;
+}
+
+.carousel-item button {
+    align-self: flex-end;
+    padding: 1.5em 4em;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: gold;
+    color: black;
+    font-weight: bold;
+    border-radius: 50px;
+    border: none!important;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Voeg overgang toe voor soepele animatie */
+}
+
+.carousel-item button:hover {
+    transform: translateY(-5px); /* Verplaats de knop omhoog met 5 pixels wanneer erover wordt gehoverd */
+}
+
+/* TOP 5 Section */
+#top-5-movies {
+    margin: 2em 0 2em 0;
+}
+
+#top-5-movies h1 {
+    font-size: 3rem;
+    margin-bottom: 1em;
+    color: #fff;
+}
+
+#movieMenu {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5em;
+}
+
+.movieMenuLink img {
+    max-width: 150px;
+}
+
+.movieThumbWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 1em;
+}
+
+.movieThumbWrapper:hover img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.movieThumbInfo {
+    text-align: center;
+}
+
+.movieThumbInfo h2 {
+    font-size: 1rem;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.movieMenuLink {
+    text-decoration: none;
+    color: #fff;
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    color: gold;
+    font-size: 1rem;
+    margin-bottom: 1em;
+}
+
+.thumb-btn {
+    display: block;
+    padding: 1em 2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 50px;
+    background-color: #6e6e6e;
+    margin-right: 1em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Voeg overgang toe voor soepele animatie */
+}
+
+.thumb-btn:hover {
+    transform: translateY(-5px);
+}
+
+.dynamicContent {
+    display: flex;
+    justify-content: space-between;
+    gap: 4em;
+}
+
+.dynamicCover img {
+    width: 400px;
+    height: auto;
+    object-fit: contain;
+}
+
+.dynamicText {
+    color: #fff;
+    position: relative;
+}
+
+.dynamicText p {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    margin-bottom: 1em;
+}
+
+#trailerLink {
+    position: absolute;
+    right: 0;
+    margin-top: 2em;
+    display: inline-block;
+    padding: 1em 2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: gold;
+    color: black;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: transform 0.3s ease;
+}
+
+#trailerLink:hover {
+    transform: translateY(-5px);
+}
+
+@media (max-width: 1024px) {
+    .container {
+        max-width: 90%;
+        width: 90%;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: auto;
+        max-width: 1024px;
+    }
+
+    .carousel-box {
+        right: unset;
+        left: 50%;
+    }
+    .carousel-item button{
+        align-self: flex-start;
+    }
+
+    .top-5-movies-wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 3em;
+    }
+
+    .dynamicCover img {
+        margin-bottom: 2em;
+        width: 100%;
+        height: auto;
+    }
+
+    #movieMenu {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .dynamicContent {
+        display: flex;
+        flex-direction: column;
+        gap: 4em;
+    }
+
+    .thumb-btn {
+        font-size: 0.8rem;
+        margin-bottom: 3em;
+    }
+}
+
+@media (max-width: 768px)  {
+    .container {
+        width: 90%;
+        padding: 0 3em;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: 500px;
+        max-width: 768px;
+    }
+
+    .top-5-movies-wrapper {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .dynamicCover img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 2em;
+    }
+
+    .movieMenuLink img {
+        margin-bottom: 3em;
+    }
+
+    .movieThumbWrapper {
+        flex-direction: column;
+        gap: 0em;
+    }
+
+    .movieThumbInfo {
+        align-self: center;
+    }
+
+    .thumb-btn {
+       display: inline-block;
+       
+       
+    }
+
+    #trailerLink {
+        right: 0;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        margin-top: 4em;
+        padding: 1.5em 2em;
+    }
+}
+
+@media (max-width: 480px)  {
+    .container {
+        max-width: 90%;
+        width: 90%;
+        padding: 0 2em;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: 300px;
+        max-width: 480px;
+    }
+
+    .carousel-box {
+        align-items: center;
+        width: 70%;
+    }
+
+    .carousel-box h1 {
+        font-size: 2.5rem;
+        align-self: flex-start;
+    }
+
+    .carousel-box p {
+        font-size: 1.6rem;
+    }
+    .top-5-movies-wrapper {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .movieThumbWrapper {
+        gap: 1em;
+        margin-right: 0;
+    }
+
+    .thumb-btn {
+        font-size: 0.6rem;
+    }
+
+    #trailerLink {
+        width: 100%;
+    }
+
+    h1#movieDutch {
+        font-size: 2rem;
+    }
+
+    p#movieOmschrijving {
+        font-size: 1rem;
+    }
+
+    .dynamicText p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 320px)  {
+    .container {
+        max-width: 100%;
+        width: 100%;
+        padding: 0 1em;
+    }
+    
+    .carousel-item img {
+        width: 100%;
+        height: 300px;
+        max-width: 320px;
+    }
+    
+    .movieThumbWrapper {
+        flex-direction: column;
+        gap: 1em;
+    }
+}
