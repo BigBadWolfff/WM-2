@@ -93,7 +93,7 @@ body {
 }
 
 .movieMenuLink img {
-    max-width: 150px;
+    max-width: 200px;
 }
 
 .movieThumbWrapper {
@@ -132,8 +132,9 @@ body {
 }
 
 .thumb-btn {
+    text-align: center;
     display: block;
-    padding: 1em 2em;
+    padding: 1em 1em;
     text-transform: uppercase;
     text-decoration: none;
     color: #fff;
@@ -187,6 +188,12 @@ body {
 
 #trailerLink:hover {
     transform: translateY(-5px);
+}
+
+@media (max-width: 1240px) {
+    .movieMenuLink img {
+        max-width: 150px;
+    }
 }
 
 @media (max-width: 1024px) {
