@@ -192,9 +192,9 @@ a {
     transition: transform 0.3s ease;
 }
 
-#trailerLink:hover {
+/* #trailerLink:hover {
     transform: translateY(-5px);
-}
+} */
 
 @media (max-width: 1240px) {
     .movieMenuLink img {
@@ -305,14 +305,16 @@ a {
         transform: translate(50%);
     }
 
+    .thumb-btn:hover {
+        transform: translate(50%);
+    }
+
     #trailerLink {
-        right: 0;
-        left: 50%;
-        transform: translate(-50%,-50%);
         text-align: center;
         margin-top: 4em;
         padding: 1.5em 2em;
     }
+
 }
 
 @media (max-width: 480px)  {
