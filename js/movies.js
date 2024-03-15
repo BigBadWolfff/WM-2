@@ -5,7 +5,6 @@ window.addEventListener("load", function () {
 });
 
 function initMovies() {
-
   /* 	======================================================================	
 		Browser & Object sniffing
 	=========================================================================== */
@@ -40,7 +39,7 @@ function initMovies() {
   var dynamicText = d.createElement("div");
   dynamicText.setAttribute("class", "dynamicText");
 
-  var movieDutch = d.createElement("h1");
+  var movieDutch = d.createElement("h2");
   movieDutch.setAttribute("id", "movieDutch");
 
   var movieOmschrijving = d.createElement("p");
@@ -99,16 +98,16 @@ function initMovies() {
     dynamicCoverImg.alt = movie.Title;
   }
 
-   // Verplaatst de dynamicCover div op schermen kleiner dan 1024px. 
- if (windowWidth <= 1024) {
-  // Verplaats de dynamicCover div op schermen kleiner dan 1024px
-  if (dynamicCover && movieOmschrijving && regiseur) {
-    movieOmschrijving.parentNode.insertBefore(dynamicCover, regiseur);
-  }
+  // Verplaatst de dynamicCover div op schermen kleiner dan 1024px.
+  if (windowWidth <= 1024) {
+    // Verplaats de dynamicCover div op schermen kleiner dan 1024px
+    if (dynamicCover && movieOmschrijving && regiseur) {
+      movieOmschrijving.parentNode.insertBefore(dynamicCover, regiseur);
+    }
   } else {
-  // Op grotere schermen: doe niets, de positie is al correct.
-}
-  
+    // Op grotere schermen: doe niets, de positie is al correct.
+  }
+
   /* 	======================================================================	
 		Event binding
 	=========================================================================== */
@@ -125,5 +124,4 @@ function initMovies() {
       });
     }
   }
-  
 }
