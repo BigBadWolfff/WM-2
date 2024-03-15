@@ -306,8 +306,8 @@ button {
 
 hr {
   border: 1px solid var(--yellow);
-  margin-inline: 2em;
   margin-block: 2em;
+  width: 100%;
 }
 
 .card {
@@ -476,7 +476,7 @@ hr {
   background-color: var(--white);
   color: var(--black);
   margin-inline: 1em;
-  padding: 0.25em 0.5em;
+  padding: 0.5em 2em;
   margin-bottom: 0.5em;
   border-radius: 20px;
 }
@@ -499,7 +499,6 @@ hr {
 .weekimgs > img {
   background-color: var(--gray);
   object-fit: cover;
-  border-radius: 15px;
 }
 
 /* colum */
@@ -1078,6 +1077,17 @@ footer {
     padding: 1.5em 2em;
     position: absolute;
     bottom: -100px;
+  }
+
+  .weekimgs {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .weekimgs img {
+    width: 100%;
   }
 }
 
