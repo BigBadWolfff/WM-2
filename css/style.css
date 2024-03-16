@@ -23,6 +23,12 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
+html{
+    font-size: 100%;
+    scroll-behavior: smooth;
+    font: inherit;
+}
+
 a {
     text-decoration: none;
 }
@@ -165,8 +171,6 @@ header {
     display: none;
 }
 
-/* Hide checkbox */
-
 /* Toggle menu icon */
 .side-menu:checked~nav {
     max-height: 100%;
@@ -192,8 +196,6 @@ button {
     border-radius: 10px;
     padding: 0 10px;
     margin-block: 18px;
-    /* max-width: 120px;
-   max-height: 40px; */
     display: inline-block;
     border: none;
     font-weight: 600;
@@ -204,7 +206,6 @@ button {
 .container {
     width: 80%;
     margin: 0 auto;
-    /* padding: 0 2em; */
 }
 
 /* hero section */
@@ -279,7 +280,7 @@ button {
     right: 10%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    color: gold;
+    color: var(--yellow);
 }
 
 .carousel-item h1 {
@@ -296,8 +297,8 @@ button {
     padding: 1.5em 4em;
     text-transform: uppercase;
     text-decoration: none;
-    background-color: gold;
-    color: black;
+    background-color: var(--yellow);
+    color: var(--black);
     font-weight: bold;
     border-radius: 50px;
     border: none !important;
@@ -372,13 +373,13 @@ hr {
 #top-5-movies h2 {
     font-size: 3rem;
     margin-bottom: 1em;
-    color: #fff;
+    color: var(--white);
 }
 
 #top-5-movies h3 {
     font-size: 1rem;
     margin-bottom: 1em;
-    color: #fff;
+    color: var(--white);
 }
 
 #movieMenu {
@@ -413,18 +414,18 @@ hr {
     font-size: 1rem;
     margin-top: 1em;
     margin-bottom: 1em;
-    color: #fff;
+    color: var(--white);
 }
 
 .movieMenuLink {
     text-decoration: none;
-    color: #fff;
+    color: var(--white);
 }
 
 .rating {
     display: flex;
     justify-content: center;
-    color: gold;
+    color: var(--yellow);
     font-size: 1rem;
     margin-bottom: 1em;
 }
@@ -435,9 +436,9 @@ hr {
     padding: 1em 1em;
     text-transform: uppercase;
     text-decoration: none;
-    color: #fff;
+    color: var(--white);
     border-radius: 50px;
-    background-color: #6e6e6e;
+    background-color: var(--gray);
     margin-right: 1em;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     /* Voeg overgang toe voor soepele animatie */
@@ -461,7 +462,7 @@ hr {
 }
 
 .dynamicText {
-    color: #fff;
+    color: var(--white);
     position: relative;
 }
 
@@ -479,8 +480,8 @@ hr {
     padding: 1em 2em;
     text-transform: uppercase;
     text-decoration: none;
-    background-color: gold;
-    color: black;
+    background-color: var(--yellow);
+    color: var(--black);
     font-weight: bold;
     border-radius: 50px;
     transition: transform 0.3s ease;
@@ -519,14 +520,10 @@ hr {
 
 /* colum */
 #column img {
-    background-color: var(--gray);
-    /* weghalen */
-    height: 150px;
-    width: 200px;
-    object-fit: cover;
+    box-shadow: var(--gray) 0px 2px 4px 0px inset;
 }
 
-article#column {
+#column {
     margin-bottom: 2em;
 }
 
@@ -552,8 +549,8 @@ article#column {
     padding: 1em 2em;
     text-transform: uppercase;
     text-decoration: none;
-    background-color: gold;
-    color: black;
+    background-color: var(--yellow);
+    color: var(--black);
     font-weight: bold;
     border-radius: 50px;
 }
@@ -843,14 +840,10 @@ footer {
         order: 3;
     }
 
-    #column>div {
-        display: flex;
+      #column>div {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
         gap: 1em;
-        margin-bottom: 1em;
-    }
-
-    #column h2 {
-        grid-area: titel;
     }
 
     .topimgs,
@@ -858,21 +851,6 @@ footer {
         flex-direction: column;
     }
 
-    .toptext {
-        grid-area: texttop;
-    }
-
-    .topimgs {
-        grid-area: imgstop;
-    }
-
-    .bottomtext {
-        grid-area: textbottom;
-    }
-
-    .bottomimgs {
-        grid-area: imgsbottom;
-    }
 
     footer {
         grid-template-columns: 1fr 1fr 1fr;
@@ -991,10 +969,6 @@ footer {
     }
 
     .bottomimgs {
-        margin-bottom: 1em;
-    }
-
-    .topimgs {
         margin-bottom: 1em;
     }
 
